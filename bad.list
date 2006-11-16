@@ -1,0 +1,9 @@
+usr/lib/gstreamer-0.10/*gstcdxaparse.*
+usr/lib/gstreamer-0.10/*gstfreeze.*
+usr/lib/gstreamer-0.10/*gstmodplug.*
+usr/lib/gstreamer-0.10/*gstqtdemux.*
+usr/lib/gstreamer-0.10/*gstspeed.*
+usr/lib/gstreamer-0.10/*gsttta.*
+usr/lib/gstreamer-0.10/*gstxingheader.*
+usr/share/doc/
+usr/share/locale/

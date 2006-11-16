@@ -1,0 +1,6 @@
+category: Audio
+requires: cygwin glib2 gstreamer010 gstreamer010-plugins-base liboil03 libdts0
+external-source: gstreamer010-plugins-bad
+sdesc: "DTS plugin for the GStreamer multimedia framework (0.10 branch)"
+ldesc: "DTS plugin for the GStreamer multimedia framework (0.10 branch)"
+
