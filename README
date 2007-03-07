@@ -3,24 +3,24 @@ gstreamer010-plugins-bad
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
-  cygwin-1.5.22-1
-  glib2-2.12.4-1
-  gstreamer010-0.10.10-1
-  gstreamer010-plugins-base-0.10.10-1
+  cygwin-1.5.24-2
+  glib2-2.12.9-1
+  gstreamer010-0.10.11-1
+  gstreamer010-plugins-base-0.10.11-1
   liboil03-0.3.9-1
 (bz2)
   libbz2_1-1.0.3-2
 (dts)
   libdts0-0.0.2-1
 (faac)
-  faac-1.24-1
+  libfaac0-1.25-1
 (faad)
-  libfaad0-2.0-2
+  libfaad0-2.0-3
 (gsm)
   libgsm0-1.0.12-1
 (opengl)
-  libGL1-6.5-1
-  libX11_6-1.0.3-1
+  libGL1-6.5.1-1
+  libX11_6-1.1.1-1
 (libmms)
   libmms0-0.3-1
 (musepack)
@@ -38,22 +38,21 @@ Runtime requirements:
 (xvid)
   libxvidcore4-1.1.2-1
 
-
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.22-1
-  autoconf2.5-2.60-1
-  automake1.9-1.9.6-1
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.2.7-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
+  cygport-0.2.10-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
   gtk-doc-1.7-1
-  libtool1.5-1.5.23a-1
+  libtool1.5-1.5.23a-2
   make-3.81-1
   pkg-config-0.21-1
   pyxml-0.8.4-1
-  sed-4.1.5-1
+  sed-4.1.5-2
 
 Canonical website:
   http://gstreamer.freedesktop.org/
@@ -64,32 +63,32 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gstreamer010-plugins-bad-0.10.3-X-src.tar.bz2
+  unpack gstreamer010-plugins-bad-0.10.4-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gstreamer010-plugins-bad-0.10.3-X.cygport all
+  cygport ./gstreamer010-plugins-bad-0.10.4-X.cygport all
 
 This will create:
-  /usr/src/gstreamer010-plugins-bad-0.10.3-X-src.tar.bz2
-  /usr/src/gstreamer010-plugins-bad-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-bad-doc-0.10.3-X.tar.bz2
+  /usr/src/gstreamer010-plugins-bad-0.10.4-X-src.tar.bz2
+  /usr/src/gstreamer010-plugins-bad-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-bad-doc-0.10.4-X.tar.bz2
 
-  /usr/src/gstreamer010-plugins-bz2-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-dts-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-faac-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-faad-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-gsm-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-libmms-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-musepack-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-musicbrainz-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-neon-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-opengl-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-sdl-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-soundtouch-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-swfdec-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-wavpack-0.10.3-X.tar.bz2
-  /usr/src/gstreamer010-plugins-xvid-0.10.3-X.tar.bz2
+  /usr/src/gstreamer010-plugins-bz2-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-dts-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-faac-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-faad-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-gsm-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-libmms-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-musepack-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-musicbrainz-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-neon-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-opengl-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-sdl-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-soundtouch-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-swfdec-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-wavpack-0.10.4-X.tar.bz2
+  /usr/src/gstreamer010-plugins-xvid-0.10.4-X.tar.bz2
 
 -------------------------------------------
 
@@ -97,28 +96,54 @@ Files included in the binary packages:
 
 (gstreamer010-plugins-bad)
   /usr/lib/gstreamer-0.10/cyggstcdxaparse.dll
+  /usr/lib/gstreamer-0.10/cyggstdeinterlace.dll
+  /usr/lib/gstreamer-0.10/cyggstfilter.dll
   /usr/lib/gstreamer-0.10/cyggstfreeze.dll
+  /usr/lib/gstreamer-0.10/cyggsth264parse.dll
   /usr/lib/gstreamer-0.10/cyggstmodplug.dll
+  /usr/lib/gstreamer-0.10/cyggstmultifile.dll
+  /usr/lib/gstreamer-0.10/cyggstnsf.dll
+  /usr/lib/gstreamer-0.10/cyggstnuvdemux.dll
+  /usr/lib/gstreamer-0.10/cyggstpitch.dll
   /usr/lib/gstreamer-0.10/cyggstqtdemux.dll
+  /usr/lib/gstreamer-0.10/cyggstreplaygain.dll
+  /usr/lib/gstreamer-0.10/cyggstrfbsrc.dll
+  /usr/lib/gstreamer-0.10/cyggstspectrum.dll
   /usr/lib/gstreamer-0.10/cyggstspeed.dll
   /usr/lib/gstreamer-0.10/cyggsttta.dll
+  /usr/lib/gstreamer-0.10/cyggstvideocrop.dll
+  /usr/lib/gstreamer-0.10/cyggstvideoparse.dll
   /usr/lib/gstreamer-0.10/cyggstxingheader.dll
+  /usr/lib/gstreamer-0.10/cyggsty4menc.dll
   /usr/lib/gstreamer-0.10/libgstcdxaparse.la
+  /usr/lib/gstreamer-0.10/libgstdeinterlace.la
+  /usr/lib/gstreamer-0.10/libgstfilter.la
   /usr/lib/gstreamer-0.10/libgstfreeze.la
+  /usr/lib/gstreamer-0.10/libgsth264parse.la
   /usr/lib/gstreamer-0.10/libgstmodplug.la
+  /usr/lib/gstreamer-0.10/libgstmultifile.la
+  /usr/lib/gstreamer-0.10/libgstnsf.la
+  /usr/lib/gstreamer-0.10/libgstnuvdemux.la
+  /usr/lib/gstreamer-0.10/libgstpitch.la
   /usr/lib/gstreamer-0.10/libgstqtdemux.la
+  /usr/lib/gstreamer-0.10/libgstreplaygain.la
+  /usr/lib/gstreamer-0.10/libgstrfbsrc.la
+  /usr/lib/gstreamer-0.10/libgstspectrum.la
   /usr/lib/gstreamer-0.10/libgstspeed.la
   /usr/lib/gstreamer-0.10/libgsttta.la
+  /usr/lib/gstreamer-0.10/libgstvideocrop.la
+  /usr/lib/gstreamer-0.10/libgstvideoparse.la
   /usr/lib/gstreamer-0.10/libgstxingheader.la
-  /usr/share/doc/Cygwin/gstreamer010-plugins-bad-0.10.3.README
-  /usr/share/doc/gstreamer010-plugins-bad-0.10.3/ABOUT-NLS
-  /usr/share/doc/gstreamer010-plugins-bad-0.10.3/AUTHORS
-  /usr/share/doc/gstreamer010-plugins-bad-0.10.3/COPYING
-  /usr/share/doc/gstreamer010-plugins-bad-0.10.3/COPYING.LIB
-  /usr/share/doc/gstreamer010-plugins-bad-0.10.3/ChangeLog
-  /usr/share/doc/gstreamer010-plugins-bad-0.10.3/INSTALL
-  /usr/share/doc/gstreamer010-plugins-bad-0.10.3/NEWS
-  /usr/share/doc/gstreamer010-plugins-bad-0.10.3/README
+  /usr/lib/gstreamer-0.10/libgsty4menc.la
+  /usr/share/doc/Cygwin/gstreamer010-plugins-bad-0.10.4.README
+  /usr/share/doc/gstreamer010-plugins-bad-0.10.4/ABOUT-NLS
+  /usr/share/doc/gstreamer010-plugins-bad-0.10.4/AUTHORS
+  /usr/share/doc/gstreamer010-plugins-bad-0.10.4/COPYING
+  /usr/share/doc/gstreamer010-plugins-bad-0.10.4/COPYING.LIB
+  /usr/share/doc/gstreamer010-plugins-bad-0.10.4/ChangeLog
+  /usr/share/doc/gstreamer010-plugins-bad-0.10.4/INSTALL
+  /usr/share/doc/gstreamer010-plugins-bad-0.10.4/NEWS
+  /usr/share/doc/gstreamer010-plugins-bad-0.10.4/README
   /usr/share/locale/af/LC_MESSAGES/gst-plugins-bad-0.10.mo
   /usr/share/locale/az/LC_MESSAGES/gst-plugins-bad-0.10.mo
   /usr/share/locale/cs/LC_MESSAGES/gst-plugins-bad-0.10.mo
@@ -199,6 +224,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/ch02.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-0.10.devhelp
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-dfbvideosink.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-alsaspdif.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-bz2.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-cdxaparse.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-dfbvideosink.html
@@ -206,17 +232,26 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-freeze.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-glimagesink.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-gsm.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-h264parse.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-modplug.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-musepack.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-musicbrainz.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-neon.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-qtdemux.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-replaygain.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-sdl.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-sdlvideosink.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-spectrum.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-speed.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-tta.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-video4linux2.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-videocrop.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-wavpack.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-xingheader.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-rganalysis.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-trm.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-videocrop.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-wavpackdec.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-wavpackenc.html
+  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-wavpackparse.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/home.png
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/index.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/index.sgml
@@ -228,6 +263,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.10.4-1 -----
+Version bump.
 
 ----- version 0.10.3-2 -----
 Added dts, gsm, and soundtouch plugins.
