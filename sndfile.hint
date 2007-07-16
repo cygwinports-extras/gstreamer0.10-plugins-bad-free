@@ -1,0 +1,6 @@
+category: Audio
+requires: cygwin glib2 gstreamer010 libsndfile1 libintl8
+external-source: gstreamer010-plugins-bad
+sdesc: "WAV/AIFF plugin for the GStreamer multimedia framework (0.10 branch)"
+ldesc: "WAV/AIFF plugin for the GStreamer multimedia framework (0.10 branch)"
+
