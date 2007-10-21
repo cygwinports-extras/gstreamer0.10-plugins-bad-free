@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin glib2 gstreamer010 libneon25
+requires: cygwin glib2 gstreamer010 libneon26
 external-source: gstreamer010-plugins-bad
 sdesc: "Neon plugin for the GStreamer mulitmedia framework (0.10 branch)"
 ldesc: "Neon plugin for the GStreamer mulitmedia framework (0.10 branch)"

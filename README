@@ -4,18 +4,18 @@ A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
   cygwin-1.5.24-2
-  glib2-2.12.12-2
-  gstreamer010-0.10.13-1
-  gstreamer010-plugins-base-0.10.13-1
+  glib2-2.12.13-1
+  gstreamer010-0.10.14-1
+  gstreamer010-plugins-base-0.10.14-1
   liboil03-0.3.11-2
 (bz2)
   libbz2_1-1.0.3-2
 (dts)
-  libdts0-0.0.2-1
+  libdca0-0.0.5-1
 (faac)
-  libfaac0-1.25-1
+  libfaac0-1.26-1
 (faad)
-  libfaad0-2.0-3
+  libfaad0-2.6-1
 (gsm)
   libgsm0-1.0.12-1
 (libmms)
@@ -23,21 +23,21 @@ Runtime requirements:
 (mpeg2enc)
   libmjpegtools18-1.8.0-1
 (musepack)
-  libmpcdec3-1.2.2-1
+  libmpcdec5-1.2.6-1
 (musicbrainz)
-  libmusicbrainz4-2.1.2-1
+  libmusicbrainz4-2.1.5-1
 (nas)
   libaudio2-1.9-1
   nas-1.9-1
 (neon)
-  libneon25-0.25.5-1
+  libneon26-0.26.4-1
 (opengl)
-  libGL1-6.5.1-1
-  libX11_6-1.1.1-1
+  libGL1-7.0.1-1
+  libX11_6-1.1.3-1
 (sdl)
-  libSDL12-1.2.11-1
+  libSDL12-1.2.12-1
 (sndfile)
-  libsndfile1-1.0.17-1
+  libsndfile1-1.0.17-2
 (soundtouch)
   libsoundtouch0-1.3.1-1
 (swfdec)
@@ -47,9 +47,9 @@ Runtime requirements:
 (wildmidi)
   libwildmidi0-0.2.2-1
 (x264)
-  libx264_54-20070213-1
+  libx264_56-680-1
 (xvid)
-  libxvidcore4-1.1.2-1
+  libxvidcore4-1.1.3-1
 
 Build requirements:
 (besides corresponding -devel packages)
@@ -57,14 +57,15 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.2.10-1
+  cygport-0.3.6-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
-  gtk-doc-1.7-1
+  gtk-doc-1.9-1
   libtool1.5-1.5.23a-2
   make-3.81-1
   pkg-config-0.21-1
-  pyxml-0.8.4-1
+  python-2.5.1-3
+  python-xml-0.8.4-2
   sed-4.1.5-2
 
 Canonical website:
