@@ -17,6 +17,7 @@ usr/lib/gstreamer-0.10/*gstmpegvideoparse.*
 usr/lib/gstreamer-0.10/*gstmve.*
 usr/lib/gstreamer-0.10/*gstnsf.*
 usr/lib/gstreamer-0.10/*gstnuvdemux.*
+usr/lib/gstreamer-0.10/*gstoss4audio.*
 usr/lib/gstreamer-0.10/*gstrawparse.*
 usr/lib/gstreamer-0.10/*gstreal.*
 usr/lib/gstreamer-0.10/*gstreplaygain.*
@@ -27,6 +28,7 @@ usr/lib/gstreamer-0.10/*gstselector.*
 usr/lib/gstreamer-0.10/*gstspeed.*
 usr/lib/gstreamer-0.10/*gstspeexresample.*
 usr/lib/gstreamer-0.10/*gststereo.*
+usr/lib/gstreamer-0.10/*gstsubenc.*
 usr/lib/gstreamer-0.10/*gsttta.*
 usr/lib/gstreamer-0.10/*gstvideosignal.*
 usr/lib/gstreamer-0.10/*gstvmnc.*
