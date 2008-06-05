@@ -4,14 +4,14 @@ A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
   cygwin-1.5.25-11
-  glib2-2.14.6-1
+  glib2-2.16.3-1
   gstreamer010-0.10.19-1
   gstreamer010-plugins-base-0.10.19-1
   liboil03-0.3.11-2
 (bz2)
   libbz2_1-1.0.3-2
 (dirac)
-  libdirac0-0.9.1-1
+  libdirac10-0.10.0-1
 (dts)
   libdca0-0.0.5-1
 (faac)
@@ -23,7 +23,7 @@ Runtime requirements:
 (libmms)
   libmms0-0.4-1
 (metadata)
-  libexempi3-1.99.5-1
+  libexempi3-2.0.1-1
   libexif12-0.6.16-2
   libiptcdata0-1.0.2-1
 (mpeg2enc)
@@ -38,7 +38,7 @@ Runtime requirements:
   libaudio2-1.9-1
   nas-1.9-1
 (neon)
-  libneon26-0.26.4-1
+  libneon27-0.28.2-1
 (ofa)
   libofa0-0.9.3-2
 (sdl)
@@ -47,14 +47,12 @@ Runtime requirements:
   libsndfile1-1.0.17-2
 (soundtouch)
   libsoundtouch0-1.3.1-1
-(swfdec)
-  libswfdec03-0.3.5-3
 (timidity)
   libtimidity010-0.1.0-1
 (wildmidi)
   libwildmidi0-0.2.2-1
 (x264)
-  libx264_56-680-1
+  libx264_59-20080521-1
 (xvid)
   libxvidcore4-1.1.3-1
 
@@ -63,11 +61,11 @@ Build requirements:
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.3.10-1
+  cygport-0.3.11-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
-  gtk-doc-1.9-1
+  gtk-doc-1.10-1
   libtool-2.2.2-2
   make-3.81-1
   pkg-config-0.21-1
@@ -110,6 +108,7 @@ This will create:
   /usr/src/gstreamer010-plugins-nas-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-neon-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-ofa-0.10.7-X.tar.bz2
+  /usr/src/gstreamer010-plugins-oss4-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-sdl-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-sndfile-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-soundtouch-0.10.7-X.tar.bz2
@@ -142,7 +141,6 @@ Files included in the binary packages:
   /usr/lib/gstreamer-0.10/cyggstmve.dll
   /usr/lib/gstreamer-0.10/cyggstnsf.dll
   /usr/lib/gstreamer-0.10/cyggstnuvdemux.dll
-  /usr/lib/gstreamer-0.10/cyggstoss4audio.dll
   /usr/lib/gstreamer-0.10/cyggstrawparse.dll
   /usr/lib/gstreamer-0.10/cyggstreal.dll
   /usr/lib/gstreamer-0.10/cyggstreplaygain.dll
@@ -175,7 +173,6 @@ Files included in the binary packages:
   /usr/lib/gstreamer-0.10/libgstmve.la
   /usr/lib/gstreamer-0.10/libgstnsf.la
   /usr/lib/gstreamer-0.10/libgstnuvdemux.la
-  /usr/lib/gstreamer-0.10/libgstoss4audio.la
   /usr/lib/gstreamer-0.10/libgstrawparse.la
   /usr/lib/gstreamer-0.10/libgstreal.la
   /usr/lib/gstreamer-0.10/libgstreplaygain.la
@@ -285,6 +282,10 @@ Files included in the binary packages:
   /usr/lib/gstreamer-0.10/cyggstofa.dll
   /usr/lib/gstreamer-0.10/libgstofa.la
 
+(gstreamer010-plugins-oss4)
+  /usr/lib/gstreamer-0.10/cyggstoss4audio.dll
+  /usr/lib/gstreamer-0.10/libgstoss4audio.la
+
 (gstreamer010-plugins-sdl)
   /usr/lib/gstreamer-0.10/cyggstsdlvideosink.dll
   /usr/lib/gstreamer-0.10/libgstsdlvideosink.la
@@ -296,10 +297,6 @@ Files included in the binary packages:
 (gstreamer010-plugins-soundtouch)
   /usr/lib/gstreamer-0.10/cyggstpitch.dll
   /usr/lib/gstreamer-0.10/libgstpitch.la
-
-(gstreamer010-plugins-swfdec)
-  /usr/lib/gstreamer-0.10/cyggstswfdec.dll
-  /usr/lib/gstreamer-0.10/libgstswfdec.la
 
 (gstreamer010-plugins-timidity)
   /usr/lib/gstreamer-0.10/cyggsttimidity.dll
@@ -404,7 +401,6 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-speed.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-speexresample.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-stereo.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-swfdec.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-timidity.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-tremor.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-tta.html
@@ -441,6 +437,10 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.10.7-2 -----
+Rebuilt for updated dirac, neon, and x264 deps.
+Removed obsolete swfdec plugin.
 
 ----- version 0.10.7-1 -----
 Version bump.
