@@ -3,17 +3,15 @@ gstreamer010-plugins-bad
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
-  cygwin-1.5.25-11
+  cygwin-1.5.25-15
   glib2-2.16.3-1
-  gstreamer010-0.10.19-1
-  gstreamer010-plugins-base-0.10.19-1
-  liboil03-0.3.11-2
+  gstreamer010-0.10.20-1
+  gstreamer010-plugins-base-0.10.20-1
 (bz2)
-  libbz2_1-1.0.3-2
-(dirac)
-  libdirac10-0.10.0-1
+  libbz2_1-1.0.5-2
 (dts)
   libdca0-0.0.5-1
+  liboil03-0.3.15-1
 (faac)
   libfaac0-1.26-1
 (faad)
@@ -47,6 +45,8 @@ Runtime requirements:
   libsndfile1-1.0.17-2
 (soundtouch)
   libsoundtouch0-1.3.1-1
+(spc)
+  libopenspc0-0.3.99-1
 (timidity)
   libtimidity010-0.1.0-1
 (wildmidi)
@@ -60,7 +60,7 @@ Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
-  binutils-20060817-1
+  binutils-20080523-1
   cygport-0.3.11-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
@@ -91,10 +91,8 @@ Build instructions:
 This will create:
   /usr/src/gstreamer010-plugins-bad-0.10.7-X-src.tar.bz2
   /usr/src/gstreamer010-plugins-bad-0.10.7-X.tar.bz2
-  /usr/src/gstreamer010-plugins-bad-doc-0.10.7-X.tar.bz2
 
   /usr/src/gstreamer010-plugins-bz2-0.10.7-X.tar.bz2
-  /usr/src/gstreamer010-plugins-dirac-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-dts-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-faac-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-faad-0.10.7-X.tar.bz2
@@ -112,18 +110,19 @@ This will create:
   /usr/src/gstreamer010-plugins-sdl-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-sndfile-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-soundtouch-0.10.7-X.tar.bz2
-  /usr/src/gstreamer010-plugins-swfdec-0.10.7-X.tar.bz2
+  /usr/src/gstreamer010-plugins-spc-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-timidity-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-wildmidi-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-x264-0.10.7-X.tar.bz2
   /usr/src/gstreamer010-plugins-xvid-0.10.7-X.tar.bz2
+  /usr/src/libgstapp0.10-0.10.7-X.tar.bz2
+  /usr/src/libgstapp0.10-devel-0.10.7-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (gstreamer010-plugins-bad)
-  /usr/bin/cyggstapp-0.10-0.dll
   /usr/lib/gstreamer-0.10/cyggstapp.dll
   /usr/lib/gstreamer-0.10/cyggstbayer.dll
   /usr/lib/gstreamer-0.10/cyggstcdxaparse.dll
@@ -196,130 +195,6 @@ Files included in the binary packages:
   /usr/share/doc/gstreamer010-plugins-bad-0.10.7/INSTALL
   /usr/share/doc/gstreamer010-plugins-bad-0.10.7/NEWS
   /usr/share/doc/gstreamer010-plugins-bad-0.10.7/README
-  /usr/share/locale/af/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/az/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/bg/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/cs/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/da/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/de/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/en_GB/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/es/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/fi/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/hu/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/it/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/ky/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/nb/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/nl/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/or/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/pl/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/pt_BR/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/ru/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/sk/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/sq/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/sr/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/sv/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/uk/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/vi/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/zh_CN/LC_MESSAGES/gst-plugins-bad-0.10.mo
-
-(gstreamer010-plugins-bz2)
-  /usr/lib/gstreamer-0.10/cyggstbz2.dll
-  /usr/lib/gstreamer-0.10/libgstbz2.la
-
-(gstreamer010-plugins-dirac)
-  /usr/lib/gstreamer-0.10/cyggstdirac.dll
-  /usr/lib/gstreamer-0.10/libgstdirac.la
-
-(gstreamer010-plugins-dts)
-  /usr/lib/gstreamer-0.10/cyggstdtsdec.dll
-  /usr/lib/gstreamer-0.10/libgstdtsdec.la
-
-(gstreamer010-plugins-faac)
-  /usr/lib/gstreamer-0.10/cyggstfaac.dll
-  /usr/lib/gstreamer-0.10/libgstfaac.la
-
-(gstreamer010-plugins-faad)
-  /usr/lib/gstreamer-0.10/cyggstfaad.dll
-  /usr/lib/gstreamer-0.10/libgstfaad.la
-
-(gstreamer010-plugins-gsm)
-  /usr/lib/gstreamer-0.10/cyggstgsm.dll
-  /usr/lib/gstreamer-0.10/libgstgsm.la
-
-(gstreamer010-plugins-libmms)
-  /usr/lib/gstreamer-0.10/cyggstmms.dll
-  /usr/lib/gstreamer-0.10/libgstmms.la
-
-(gstreamer010-plugins-metadata)
-  /usr/lib/gstreamer-0.10/cyggstmetadata.dll
-  /usr/lib/gstreamer-0.10/libgstmetadata.la
-
-(gstreamer010-plugins-mpeg2enc)
-  /usr/lib/gstreamer-0.10/cyggstmpeg2enc.dll
-  /usr/lib/gstreamer-0.10/libgstmpeg2enc.la
-
-(gstreamer010-plugins-mplex)
-  /usr/lib/gstreamer-0.10/cyggstmplex.dll
-  /usr/lib/gstreamer-0.10/libgstmplex.la
-
-(gstreamer010-plugins-musepack)
-  /usr/lib/gstreamer-0.10/cyggstmusepack.dll
-  /usr/lib/gstreamer-0.10/libgstmusepack.la
-
-(gstreamer010-plugins-musicbrainz)
-  /usr/lib/gstreamer-0.10/cyggsttrm.dll
-  /usr/lib/gstreamer-0.10/libgsttrm.la
-
-(gstreamer010-plugins-nas)
-  /usr/lib/gstreamer-0.10/cyggstnassink.dll
-  /usr/lib/gstreamer-0.10/libgstnassink.la
-
-(gstreamer010-plugins-neon)
-  /usr/lib/gstreamer-0.10/cyggstneonhttpsrc.dll
-  /usr/lib/gstreamer-0.10/libgstneonhttpsrc.la
-
-(gstreamer010-plugins-ofa)
-  /usr/lib/gstreamer-0.10/cyggstofa.dll
-  /usr/lib/gstreamer-0.10/libgstofa.la
-
-(gstreamer010-plugins-oss4)
-  /usr/lib/gstreamer-0.10/cyggstoss4audio.dll
-  /usr/lib/gstreamer-0.10/libgstoss4audio.la
-
-(gstreamer010-plugins-sdl)
-  /usr/lib/gstreamer-0.10/cyggstsdlvideosink.dll
-  /usr/lib/gstreamer-0.10/libgstsdlvideosink.la
-
-(gstreamer010-plugins-sndfile)
-  /usr/lib/gstreamer-0.10/cyggstsndfile.dll
-  /usr/lib/gstreamer-0.10/libgstsndfile.la
-
-(gstreamer010-plugins-soundtouch)
-  /usr/lib/gstreamer-0.10/cyggstpitch.dll
-  /usr/lib/gstreamer-0.10/libgstpitch.la
-
-(gstreamer010-plugins-timidity)
-  /usr/lib/gstreamer-0.10/cyggsttimidity.dll
-  /usr/lib/gstreamer-0.10/libgsttimidity.la
-
-(gstreamer010-plugins-wildmidi)
-  /usr/lib/gstreamer-0.10/cyggstwildmidi.dll
-  /usr/lib/gstreamer-0.10/libgstwildmidi.la
-
-(gstreamer010-plugins-x264)
-  /usr/lib/gstreamer-0.10/cyggstx264.dll
-  /usr/lib/gstreamer-0.10/libgstx264.la
-
-(gstreamer010-plugins-xvid)
-  /usr/lib/gstreamer-0.10/cyggstxvid.dll
-  /usr/lib/gstreamer-0.10/libgstxvid.la
-
-(gstreamer010-plugins-bad-devel)
-  /usr/include/gstreamer-0.10/gst/app/gstappbuffer.h
-  /usr/include/gstreamer-0.10/gst/app/gstappsink.h
-  /usr/include/gstreamer-0.10/gst/app/gstappsrc.h
-  /usr/lib/libgstapp-0.10.dll.a
-  /usr/lib/libgstapp-0.10.la
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/ch01.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/ch02.html
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/ch03.html
@@ -433,10 +308,142 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/right.png
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/style.css
   /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/up.png
+  /usr/share/locale/af/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/az/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/bg/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/cs/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/da/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/de/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/en_GB/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/es/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/fi/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/hu/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/it/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/ky/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/nb/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/nl/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/or/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/pl/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/pt_BR/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/ru/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/sk/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/sq/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/sr/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/sv/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/uk/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/vi/LC_MESSAGES/gst-plugins-bad-0.10.mo
+  /usr/share/locale/zh_CN/LC_MESSAGES/gst-plugins-bad-0.10.mo
+
+(gstreamer010-plugins-bz2)
+  /usr/lib/gstreamer-0.10/cyggstbz2.dll
+  /usr/lib/gstreamer-0.10/libgstbz2.la
+
+(gstreamer010-plugins-dts)
+  /usr/lib/gstreamer-0.10/cyggstdtsdec.dll
+  /usr/lib/gstreamer-0.10/libgstdtsdec.la
+
+(gstreamer010-plugins-faac)
+  /usr/lib/gstreamer-0.10/cyggstfaac.dll
+  /usr/lib/gstreamer-0.10/libgstfaac.la
+
+(gstreamer010-plugins-faad)
+  /usr/lib/gstreamer-0.10/cyggstfaad.dll
+  /usr/lib/gstreamer-0.10/libgstfaad.la
+
+(gstreamer010-plugins-gsm)
+  /usr/lib/gstreamer-0.10/cyggstgsm.dll
+  /usr/lib/gstreamer-0.10/libgstgsm.la
+
+(gstreamer010-plugins-libmms)
+  /usr/lib/gstreamer-0.10/cyggstmms.dll
+  /usr/lib/gstreamer-0.10/libgstmms.la
+
+(gstreamer010-plugins-metadata)
+  /usr/lib/gstreamer-0.10/cyggstmetadata.dll
+  /usr/lib/gstreamer-0.10/libgstmetadata.la
+
+(gstreamer010-plugins-mpeg2enc)
+  /usr/lib/gstreamer-0.10/cyggstmpeg2enc.dll
+  /usr/lib/gstreamer-0.10/libgstmpeg2enc.la
+
+(gstreamer010-plugins-mplex)
+  /usr/lib/gstreamer-0.10/cyggstmplex.dll
+  /usr/lib/gstreamer-0.10/libgstmplex.la
+
+(gstreamer010-plugins-musepack)
+  /usr/lib/gstreamer-0.10/cyggstmusepack.dll
+  /usr/lib/gstreamer-0.10/libgstmusepack.la
+
+(gstreamer010-plugins-musicbrainz)
+  /usr/lib/gstreamer-0.10/cyggsttrm.dll
+  /usr/lib/gstreamer-0.10/libgsttrm.la
+
+(gstreamer010-plugins-nas)
+  /usr/lib/gstreamer-0.10/cyggstnassink.dll
+  /usr/lib/gstreamer-0.10/libgstnassink.la
+
+(gstreamer010-plugins-neon)
+  /usr/lib/gstreamer-0.10/cyggstneonhttpsrc.dll
+  /usr/lib/gstreamer-0.10/libgstneonhttpsrc.la
+
+(gstreamer010-plugins-ofa)
+  /usr/lib/gstreamer-0.10/cyggstofa.dll
+  /usr/lib/gstreamer-0.10/libgstofa.la
+
+(gstreamer010-plugins-oss4)
+  /usr/lib/gstreamer-0.10/cyggstoss4audio.dll
+  /usr/lib/gstreamer-0.10/libgstoss4audio.la
+
+(gstreamer010-plugins-sdl)
+  /usr/lib/gstreamer-0.10/cyggstsdlvideosink.dll
+  /usr/lib/gstreamer-0.10/libgstsdlvideosink.la
+
+(gstreamer010-plugins-sndfile)
+  /usr/lib/gstreamer-0.10/cyggstsndfile.dll
+  /usr/lib/gstreamer-0.10/libgstsndfile.la
+
+(gstreamer010-plugins-soundtouch)
+  /usr/lib/gstreamer-0.10/cyggstpitch.dll
+  /usr/lib/gstreamer-0.10/libgstpitch.la
+
+(gstreamer010-plugins-spc)
+  /usr/lib/gstreamer-0.10/cyggstspc.dll
+  /usr/lib/gstreamer-0.10/libgstspc.la
+
+(gstreamer010-plugins-timidity)
+  /usr/lib/gstreamer-0.10/cyggsttimidity.dll
+  /usr/lib/gstreamer-0.10/libgsttimidity.la
+
+(gstreamer010-plugins-wildmidi)
+  /usr/lib/gstreamer-0.10/cyggstwildmidi.dll
+  /usr/lib/gstreamer-0.10/libgstwildmidi.la
+
+(gstreamer010-plugins-x264)
+  /usr/lib/gstreamer-0.10/cyggstx264.dll
+  /usr/lib/gstreamer-0.10/libgstx264.la
+
+(gstreamer010-plugins-xvid)
+  /usr/lib/gstreamer-0.10/cyggstxvid.dll
+  /usr/lib/gstreamer-0.10/libgstxvid.la
+
+(libgstapp0.10)
+  /usr/bin/cyggstapp-0.10-0.dll
+
+(libgstapp0.10-devel)
+  /usr/include/gstreamer-0.10/gst/app/gstappbuffer.h
+  /usr/include/gstreamer-0.10/gst/app/gstappsink.h
+  /usr/include/gstreamer-0.10/gst/app/gstappsrc.h
+  /usr/lib/libgstapp-0.10.dll.a
+  /usr/lib/libgstapp-0.10.la
 
 ------------------
 
 Port Notes:
+
+----- version 0.10.7-3 -----
+Rebuilt for GStreamer 0.10.20.
+Added plugins: spc.
+Removed dirac plugin due to imcompatibility with dirac-0.10.0.
 
 ----- version 0.10.7-2 -----
 Rebuilt for updated dirac, neon, and x264 deps.
