@@ -8,7 +8,6 @@ usr/lib/gstreamer-0.10/*gstfilter.*
 usr/lib/gstreamer-0.10/*gstflvdemux.*
 usr/lib/gstreamer-0.10/*gstfreeze.*
 usr/lib/gstreamer-0.10/*gsth264parse.*
-usr/lib/gstreamer-0.10/*gstinterleave.*
 usr/lib/gstreamer-0.10/*gstmodplug.*
 usr/lib/gstreamer-0.10/*gstmpeg4videoparse.*
 usr/lib/gstreamer-0.10/*gstmpegtsparse.*
@@ -18,7 +17,6 @@ usr/lib/gstreamer-0.10/*gstnsf.*
 usr/lib/gstreamer-0.10/*gstnuvdemux.*
 usr/lib/gstreamer-0.10/*gstrawparse.*
 usr/lib/gstreamer-0.10/*gstreal.*
-usr/lib/gstreamer-0.10/*gstreplaygain.*
 usr/lib/gstreamer-0.10/*gstrfbsrc.*
 usr/lib/gstreamer-0.10/*gstrtpmanager.*
 usr/lib/gstreamer-0.10/*gstsdpelem.*

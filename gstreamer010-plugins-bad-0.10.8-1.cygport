@@ -1,8 +1,10 @@
 # dirac plugin not working with dirac-0.10.0
 GST_PLUGINS_EXT="bz2 dts faac faad gsm libmms metadata mpeg2enc mplex
-                 musepack musicbrainz nas neon ofa oss4 sdl sndfile soundtouch
+                 musepack musicbrainz nas neon ofa sdl sndfile soundtouch
                  spc timidity wildmidi x264 xvid"
 inherit gst-plugins
+
+PATCH_URI="0.10.7-int-types.patch"
 
 PKG_NAMES="${PN} libgstapp${PV_MAJ_MIN} libgstapp${PV_MAJ_MIN}-devel"
 PKG_HINTS="bad lib devel"
