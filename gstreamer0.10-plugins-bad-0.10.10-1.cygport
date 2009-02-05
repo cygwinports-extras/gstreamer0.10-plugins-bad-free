@@ -1,0 +1,40 @@
+# celt: not compatible with celt-0.5.0 API
+# dirac: segfaults
+# ladspa: does not register GTypes and segfaults with ladspa-blop
+GST_PLUGINS_EXT="apexsink bz2 dts faac faad gsm jack jp2k
+                 libmms metadata mpeg2enc mplex musepack musicbrainz
+				 nas neon ofa resindvd sdl sndfile soundtouch spc timidity
+				 twolame wildmidi x264 xvid"
+inherit gst-plugins
+
+PATCH_URI="0.10.7-int-types.patch"
+
+PKG_NAMES="${PN}"
+PKG_HINTS="bad"
+
+for ext in ${GST_PLUGINS_EXT}
+do
+	PKG_NAMES+=" ${PN%-bad}-${ext}"
+	PKG_HINTS+=" ${ext}"
+	case ${ext} in
+		libmms)
+			declare gstreamer0_10_plugins_${ext}_CONTENTS="${GST_PLUGINDIR#/}/*gstmms.*"
+			gstreamer0_10_plugins_bad_CONTENTS+=" --exclude=*gstmms*"
+			;;
+		musicbrainz)
+			declare gstreamer0_10_plugins_${ext}_CONTENTS="${GST_PLUGINDIR#/}/*gsttrm.*"
+			gstreamer0_10_plugins_bad_CONTENTS+=" --exclude=*gsttrm.*"
+			;;
+		resindvd)
+			declare gstreamer0_10_plugins_${ext}_CONTENTS="${GST_PLUGINDIR#/}/*resindvd*"
+			gstreamer0_10_plugins_bad_CONTENTS+=" --exclude=*resindvd*"
+			;;
+		*)
+			declare gstreamer0_10_plugins_${ext}_CONTENTS="${GST_PLUGINDIR#/}/*gst${ext}*"
+			gstreamer0_10_plugins_bad_CONTENTS+=" --exclude=*gst${ext}*"
+			;;
+	esac
+done
+unset ext
+
+gstreamer0_10_plugins_bad_CONTENTS+=" usr/"

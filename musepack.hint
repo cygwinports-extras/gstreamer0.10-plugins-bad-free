@@ -1,6 +1,6 @@
 category: Audio
-requires: cygwin glib2 gstreamer010 libmpcdec5
-external-source: gstreamer010-plugins-bad
+requires: cygwin libglib2.0_0 libgstreamer0.10_0 libmpcdec5
+external-source: gstreamer0.10-plugins-bad
 sdesc: "Musepack plugin for the GStreamer multimedia framework (0.10 branch)"
 ldesc: "Musepack plugin for the GStreamer multimedia framework (0.10 branch)"
 

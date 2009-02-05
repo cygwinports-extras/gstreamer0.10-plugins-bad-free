@@ -1,5 +1,0 @@
-category: Gnome Audio
-requires: cygwin glib2 gstreamer010
-external-source: gstreamer010-plugins-bad
-sdesc: "GStreamer 0.10 application interaction library (runtime)"
-ldesc: "This is gst-plugins, a set of plug-ins for GStreamer."

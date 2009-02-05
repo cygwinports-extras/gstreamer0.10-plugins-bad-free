@@ -1,6 +1,6 @@
 category: Audio
-requires: cygwin glib2 gstreamer010 libfaac0
-external-source: gstreamer010-plugins-bad
+requires: cygwin libglib2.0_0 libgstreamer0.10_0 libfaac0
+external-source: gstreamer0.10-plugins-bad
 sdesc: "FAAC plugin for the GStreamer multimedia framework (0.10 branch)"
 ldesc: "FAAC plugin for the GStreamer multimedia framework (0.10 branch)"
 
