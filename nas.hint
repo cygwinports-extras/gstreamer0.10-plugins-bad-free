@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin libglib2.0_0 libgstaudio0.10_0 libgstreamer0.10_0 libaudio2 nas
+requires: libglib2.0_0 libgstaudio0.10_0 libgstreamer0.10_0 libaudio2 nas
 external-source: gstreamer0.10-plugins-bad
 sdesc: "NAS plugin for the GStreamer multimedia framework (0.10 branch)"
 ldesc: "NAS plugin for the GStreamer multimedia framework (0.10 branch)"
