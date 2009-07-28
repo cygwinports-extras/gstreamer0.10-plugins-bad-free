@@ -1,12 +1,10 @@
-# celt: not compatible with celt-0.5.0 API
-# dirac: segfaults
-GST_PLUGINS_EXT="apexsink bz2 dts faac faad gsm jack jp2k
-                 ladspa libmms metadata mpeg2enc mplex musepack musicbrainz
-				 nas neon ofa resindvd sdl sndfile soundtouch spc timidity
-				 twolame wildmidi x264 xvid"
+GST_PLUGINS_EXT="apexsink assrender bz2 celt dirac dts faac faad gsm jp2k
+                 ladspa libmms metadata mimic modplug mpeg2enc mplex
+                 musepack musicbrainz nas neon ofa resindvd sdl sndfile
+                 soundtouch timidity wildmidi xvid"
 inherit gst-plugins
 
-PATCH_URI="0.10.7-int-types.patch"
+PATCH_URI="0.10.13-vpath.patch"
 
 PKG_NAMES="${PN}"
 PKG_HINTS="bad"
@@ -36,4 +34,10 @@ do
 done
 unset ext
 
-gstreamer0_10_plugins_bad_CONTENTS+=" usr/"
+gstreamer0_10_plugins_bad_CONTENTS+=" usr/lib/gstreamer-0.10/ usr/share/"
+
+PKG_NAMES+=" libgstphotography0.10_0 libgstphotography0.10-devel"
+PKG_HINTS+=" libgstphotography0.10_0 libgstphotography0.10-devel"
+libgstphotography0_10_0_CONTENTS="usr/bin/cyggstphotography-0.10-0.dll"
+libgstphotography0_10_devel_CONTENTS="usr/include/gstreamer-0.10/gst/interfaces/
+                                      usr/lib/libgstphotography-0.10.*"
