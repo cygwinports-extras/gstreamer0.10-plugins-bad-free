@@ -38,6 +38,7 @@ Runtime requirements:
 (ladspa)
   ladspa-sdk
   ladspa-*
+  liblrdf2-0.4.0-10
 (libmms)
   libmms0-0.4-10
 (metadata)
