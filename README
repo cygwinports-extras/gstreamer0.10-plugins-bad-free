@@ -3,15 +3,15 @@ gstreamer0.10-plugins-bad
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
-  cygwin-1.7.0-52
+  cygwin-1.7.0-60
   libgcc1-4.3.2-2
-  libglib2.0_0-2.20.4-1
-  libgstaudio0.10_0-0.10.23-1
-  libgstnetbuffer0.10_0-0.10.23-1
-  libgstreamer0.10_0-0.10.23-2
-  libgstrtp0.10_0-0.10.23-1
-  libgstsdp0.10_0-0.10.23-1
-  libgstvideo0.10_0-0.10.23-1
+  libglib2.0_0-2.20.5-1
+  libgstaudio0.10_0-0.10.24-1
+  libgstnetbuffer0.10_0-0.10.24-1
+  libgstreamer0.10_0-0.10.24-2
+  libgstrtp0.10_0-0.10.24-1
+  libgstsdp0.10_0-0.10.24-1
+  libgstvideo0.10_0-0.10.24-1
   libintl8-0.17-11
   liboil0.3_0-0.3.16-1
   libX11_6-1.2.2-1
@@ -31,6 +31,8 @@ Runtime requirements:
   libfaac0-1.28-1
 (faad)
   libfaad2-2.7-10
+(gme)
+  libgme0-0.5.5-1
 (gsm)
   libgsm0-1.0.13-1
 (jp2k)
@@ -41,6 +43,9 @@ Runtime requirements:
   liblrdf2-0.4.0-10
 (libmms)
   libmms0-0.4-10
+(lv2)
+  libslv2_9-0.6.6-1
+  lv2-*
 (metadata)
   libexempi3-2.1.0-10
   libexif12-0.6.17-10
@@ -61,6 +66,8 @@ Runtime requirements:
   libneon27-0.28.2-1
 (ofa)
   libofa0-0.9.3-10
+(schro)
+  libschroedinger1.0_0-1.0.7-1
 (sdl)
   libSDL1.2_0-1.2.13-10
 (sndfile)
@@ -76,20 +83,19 @@ Runtime requirements:
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.9-1.9.6-3
-  binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  gettext-devel-0.17-2
-  gtk-doc-1.11-1
-  libtool-2.2.6a-1
-  make-3.81-1
-  pkg-config-0.23a-2
-  python-2.5.4-1
-  python-xml-0.8.4-2
+  autoconf2.5-2.63-10
+  automake1.9-1.9.6-10
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  gettext-devel-0.17-11
+  gtk-doc-1.11-2
+  libtool-2.2.7a-14
+  make-3.81-2
+  pkg-config-0.23b-10
+  python-2.5.4-10
   sed-4.1.5-2
 
 Canonical website:
@@ -101,464 +107,61 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gstreamer0.10-plugins-bad-0.10.13-X-src.tar.bz2
+  unpack gstreamer0.10-plugins-bad-0.10.14-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gstreamer0.10-plugins-bad-0.10.13-X.cygport all
+  cygport ./gstreamer0.10-plugins-bad-0.10.14-X.cygport all
 
 This will create:
-  /usr/src/gstreamer0.10-plugins-bad-0.10.13-X-src.tar.bz2
-  /usr/src/gstreamer0.10-plugins-bad-0.10.13-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-bad-0.10.14-X-src.tar.bz2
+  /usr/src/gstreamer0.10-plugins-bad-0.10.14-X.tar.bz2
 
-  /usr/src/gstreamer0.10-plugins-apexsink-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-assrender-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-bz2-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-celt-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-dirac-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-dts-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-faac-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-faad-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-gsm-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-jp2k-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-ladspa-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-libmms-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-metadata-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-mpeg2enc-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-mplex-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-modplug-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-musepack-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-musicbrainz-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-nas-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-neon-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-ofa-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-resindvd-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-sdl-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-sndfile-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-soundtouch-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-timidity-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-wildmidi-0.10.13-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-xvid-0.10.13-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-apexsink-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-assrender-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-bz2-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-celt-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-dirac-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-dts-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-faac-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-faad-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-gme-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-gsm-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-jp2k-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-ladspa-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-libmms-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-lv2-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-metadata-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-mpeg2enc-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-mplex-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-modplug-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-musepack-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-musicbrainz-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-nas-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-neon-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-ofa-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-resindvd-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-schro-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-sdl-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-sndfile-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-soundtouch-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-timidity-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-wildmidi-0.10.14-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-xvid-0.10.14-X.tar.bz2
+  /usr/src/libgstbasevideo0.10-devel-0.10.14-X.tar.bz2
+  /usr/src/libgstbasevideo0.10_0-0.10.14-X.tar.bz2
+  /usr/src/libgstphotography0.10-devel-0.10.14-X.tar.bz2
+  /usr/src/libgstphotography0.10_0-0.10.14-X.tar.bz2
+  /usr/src/libgstsignalprocessor0.10-devel-0.10.14-X.tar.bz2
+  /usr/src/libgstsignalprocessor0.10_0-0.10.14-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(gstreamer0.10-plugins-bad)
-  /usr/lib/gstreamer-0.10/cyggstaacparse.dll
-  /usr/lib/gstreamer-0.10/cyggstadpcmdec.dll
-  /usr/lib/gstreamer-0.10/cyggstaiffparse.dll
-  /usr/lib/gstreamer-0.10/cyggstamrparse.dll
-  /usr/lib/gstreamer-0.10/cyggstautoconvert.dll
-  /usr/lib/gstreamer-0.10/cyggstbayer.dll
-  /usr/lib/gstreamer-0.10/cyggstcamerabin.dll
-  /usr/lib/gstreamer-0.10/cyggstcdxaparse.dll
-  /usr/lib/gstreamer-0.10/cyggstdccp.dll
-  /usr/lib/gstreamer-0.10/cyggstdebugutilsbad.dll
-  /usr/lib/gstreamer-0.10/cyggstdtmf.dll
-  /usr/lib/gstreamer-0.10/cyggstdvdspu.dll
-  /usr/lib/gstreamer-0.10/cyggstfestival.dll
-  /usr/lib/gstreamer-0.10/cyggstfreeze.dll
-  /usr/lib/gstreamer-0.10/cyggsth264parse.dll
-  /usr/lib/gstreamer-0.10/cyggsthdvparse.dll
-  /usr/lib/gstreamer-0.10/cyggstid3tag.dll
-  /usr/lib/gstreamer-0.10/cyggstlegacyresample.dll
-  /usr/lib/gstreamer-0.10/cyggstliveadder.dll
-  /usr/lib/gstreamer-0.10/cyggstmpeg4videoparse.dll
-  /usr/lib/gstreamer-0.10/cyggstmpegdemux.dll
-  /usr/lib/gstreamer-0.10/cyggstmpegtsmux.dll
-  /usr/lib/gstreamer-0.10/cyggstmpegvideoparse.dll
-  /usr/lib/gstreamer-0.10/cyggstmve.dll
-  /usr/lib/gstreamer-0.10/cyggstmxf.dll
-  /usr/lib/gstreamer-0.10/cyggstnsf.dll
-  /usr/lib/gstreamer-0.10/cyggstnuvdemux.dll
-  /usr/lib/gstreamer-0.10/cyggstpcapparse.dll
-  /usr/lib/gstreamer-0.10/cyggstqtmux.dll
-  /usr/lib/gstreamer-0.10/cyggstrawparse.dll
-  /usr/lib/gstreamer-0.10/cyggstreal.dll
-  /usr/lib/gstreamer-0.10/cyggstrfbsrc.dll
-  /usr/lib/gstreamer-0.10/cyggstrtpmanager.dll
-  /usr/lib/gstreamer-0.10/cyggstrtpmux.dll
-  /usr/lib/gstreamer-0.10/cyggstscaletempoplugin.dll
-  /usr/lib/gstreamer-0.10/cyggstsdpelem.dll
-  /usr/lib/gstreamer-0.10/cyggstselector.dll
-  /usr/lib/gstreamer-0.10/cyggstshapewipe.dll
-  /usr/lib/gstreamer-0.10/cyggstsiren.dll
-  /usr/lib/gstreamer-0.10/cyggstspeed.dll
-  /usr/lib/gstreamer-0.10/cyggststereo.dll
-  /usr/lib/gstreamer-0.10/cyggstsubenc.dll
-  /usr/lib/gstreamer-0.10/cyggsttta.dll
-  /usr/lib/gstreamer-0.10/cyggstvalve.dll
-  /usr/lib/gstreamer-0.10/cyggstvideosignal.dll
-  /usr/lib/gstreamer-0.10/cyggstvmnc.dll
-  /usr/lib/gstreamer-0.10/cyggstxdgmime.dll
-  /usr/lib/gstreamer-0.10/libgstaacparse.la
-  /usr/lib/gstreamer-0.10/libgstadpcmdec.la
-  /usr/lib/gstreamer-0.10/libgstaiffparse.la
-  /usr/lib/gstreamer-0.10/libgstamrparse.la
-  /usr/lib/gstreamer-0.10/libgstautoconvert.la
-  /usr/lib/gstreamer-0.10/libgstbayer.la
-  /usr/lib/gstreamer-0.10/libgstcamerabin.la
-  /usr/lib/gstreamer-0.10/libgstcdxaparse.la
-  /usr/lib/gstreamer-0.10/libgstdccp.la
-  /usr/lib/gstreamer-0.10/libgstdebugutilsbad.la
-  /usr/lib/gstreamer-0.10/libgstdtmf.la
-  /usr/lib/gstreamer-0.10/libgstdvdspu.la
-  /usr/lib/gstreamer-0.10/libgstfestival.la
-  /usr/lib/gstreamer-0.10/libgstfreeze.la
-  /usr/lib/gstreamer-0.10/libgsth264parse.la
-  /usr/lib/gstreamer-0.10/libgsthdvparse.la
-  /usr/lib/gstreamer-0.10/libgstid3tag.la
-  /usr/lib/gstreamer-0.10/libgstlegacyresample.la
-  /usr/lib/gstreamer-0.10/libgstliveadder.la
-  /usr/lib/gstreamer-0.10/libgstmpeg4videoparse.la
-  /usr/lib/gstreamer-0.10/libgstmpegdemux.la
-  /usr/lib/gstreamer-0.10/libgstmpegtsmux.la
-  /usr/lib/gstreamer-0.10/libgstmpegvideoparse.la
-  /usr/lib/gstreamer-0.10/libgstmve.la
-  /usr/lib/gstreamer-0.10/libgstmxf.la
-  /usr/lib/gstreamer-0.10/libgstnsf.la
-  /usr/lib/gstreamer-0.10/libgstnuvdemux.la
-  /usr/lib/gstreamer-0.10/libgstpcapparse.la
-  /usr/lib/gstreamer-0.10/libgstqtmux.la
-  /usr/lib/gstreamer-0.10/libgstrawparse.la
-  /usr/lib/gstreamer-0.10/libgstreal.la
-  /usr/lib/gstreamer-0.10/libgstrfbsrc.la
-  /usr/lib/gstreamer-0.10/libgstrtpmanager.la
-  /usr/lib/gstreamer-0.10/libgstrtpmux.la
-  /usr/lib/gstreamer-0.10/libgstscaletempoplugin.la
-  /usr/lib/gstreamer-0.10/libgstsdpelem.la
-  /usr/lib/gstreamer-0.10/libgstselector.la
-  /usr/lib/gstreamer-0.10/libgstshapewipe.la
-  /usr/lib/gstreamer-0.10/libgstsiren.la
-  /usr/lib/gstreamer-0.10/libgstspeed.la
-  /usr/lib/gstreamer-0.10/libgststereo.la
-  /usr/lib/gstreamer-0.10/libgstsubenc.la
-  /usr/lib/gstreamer-0.10/libgsttta.la
-  /usr/lib/gstreamer-0.10/libgstvalve.la
-  /usr/lib/gstreamer-0.10/libgstvideosignal.la
-  /usr/lib/gstreamer-0.10/libgstvmnc.la
-  /usr/lib/gstreamer-0.10/libgstxdgmime.la
-  /usr/share/doc/gstreamer0.10-plugins-bad/AUTHORS
-  /usr/share/doc/gstreamer0.10-plugins-bad/COPYING
-  /usr/share/doc/gstreamer0.10-plugins-bad/COPYING.LIB
-  /usr/share/doc/gstreamer0.10-plugins-bad/ChangeLog
-  /usr/share/doc/gstreamer0.10-plugins-bad/NEWS
-  /usr/share/doc/gstreamer0.10-plugins-bad/README
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/GstBaseMetadata.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/camerabin.png
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/ch01.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/ch02.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/ch03.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-0.10.devhelp
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-0.10.devhelp2
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-aacparse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-amrparse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-amrwbdec.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-amrwbenc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-amrwbparse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-autoconvert.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-camerabin.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-celtdec.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-celtenc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-dccpclientsink.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-dccpclientsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-dccpserversink.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-dccpserversrc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-dfbvideosink.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-directdrawsink.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-dtmfsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-dtsdec.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-dvbsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-dvdspu.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-festival.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-fpsdisplaysink.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-gstrtpbin.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-gstrtpclient.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-gstrtpjitterbuffer.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-gstrtpptdemux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-gstrtpsession.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-gstrtpssrcdemux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-input-selector.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-ivorbisdec.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-jackaudiosink.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-jackaudiosrc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-legacyresample.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-liveadder.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-metadatademux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-metadatamux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-mimdec.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-mimenc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-modplug.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-mpeg2enc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-mplex.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-mxfdemux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-mxfmux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-mythtvsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-nuvdemux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-output-selector.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-aacparse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-alsaspdif.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-amrparse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-amrwb.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-autoconvert.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-bayer.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-bz2.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-camerabin.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-cdaudio.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-cdxaparse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-celt.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-dccp.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-debugutilsbad.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-dfbvideosink.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-dirac.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-directdraw.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-dtmf.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-dtsdec.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-dvb.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-dvbsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-dvdspu.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-faac.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-faad.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-fbdevsink.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-festival.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-filter.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-freeze.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-gsm.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-gstrtpmanager.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-h264parse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-jack.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-ladspa.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-legacyresample.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-liveadder.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-metadata.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-mimic.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-mms.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-modplug.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-mpeg2enc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-mpeg4videoparse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-mpegtsparse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-mpegvideoparse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-mplex.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-musepack.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-musicbrainz.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-mve.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-mxf.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-nas.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-neon.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-nsfdec.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-nuvdemux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-rawparse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-real.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-rfbsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-rtpmux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-scaletempo.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-sdl.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-sdp.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-selector.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-shapewipe.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-sndfile.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-soundtouch.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-spcdec.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-speed.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-stereo.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-swfdec.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-timidity.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-tremor.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-tta.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-valve.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-vcdsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-videosignal.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-vmnc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-wildmidi.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-plugin-xvid.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-rtpdtmfdepay.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-rtpdtmfmux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-rtpdtmfsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-rtpmux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-scaletempo.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-sdlaudiosink.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-sdlvideosink.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-sdpdemux.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-shapewipe.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-speed.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-stereo.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-timidity.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-trm.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-valve.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-videoanalyse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-videodetect.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-videomark.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-videoparse.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/gst-plugins-bad-plugins-wildmidi.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/home.png
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/index.html
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/index.sgml
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/left.png
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/right.png
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/style.css
-  /usr/share/gtk-doc/html/gst-plugins-bad-plugins-0.10/up.png
-  /usr/share/locale/af/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/az/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/bg/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/ca/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/cs/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/da/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/de/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/en_GB/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/es/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/fi/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/fr/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/hu/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/id/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/it/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/ja/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/ky/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/lt/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/mt/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/nb/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/nl/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/or/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/pl/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/pt_BR/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/ru/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/sk/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/sq/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/sr/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/sv/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/tr/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/uk/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/vi/LC_MESSAGES/gst-plugins-bad-0.10.mo
-  /usr/share/locale/zh_CN/LC_MESSAGES/gst-plugins-bad-0.10.mo
-
-(gstreamer0.10-plugins-apexsink)
-  /usr/lib/gstreamer-0.10/cyggstapexsink.dll
-  /usr/lib/gstreamer-0.10/libgstapexsink.la
-
-(gstreamer0.10-plugins-assrender)
-  /usr/lib/gstreamer-0.10/cyggstassrender.dll
-  /usr/lib/gstreamer-0.10/libgstassrender.la
-
-(gstreamer0.10-plugins-bz2)
-  /usr/lib/gstreamer-0.10/cyggstbz2.dll
-  /usr/lib/gstreamer-0.10/libgstbz2.la
-
-(gstreamer0.10-plugins-celt)
-  /usr/lib/gstreamer-0.10/cyggstcelt.dll
-  /usr/lib/gstreamer-0.10/libgstcelt.la
-
-(gstreamer0.10-plugins-dirac)
-  /usr/lib/gstreamer-0.10/cyggstdirac.dll
-  /usr/lib/gstreamer-0.10/libgstdirac.la
-
-(gstreamer0.10-plugins-dts)
-  /usr/lib/gstreamer-0.10/cyggstdtsdec.dll
-  /usr/lib/gstreamer-0.10/libgstdtsdec.la
-
-(gstreamer0.10-plugins-faac)
-  /usr/lib/gstreamer-0.10/cyggstfaac.dll
-  /usr/lib/gstreamer-0.10/libgstfaac.la
-
-(gstreamer0.10-plugins-faad)
-  /usr/lib/gstreamer-0.10/cyggstfaad.dll
-  /usr/lib/gstreamer-0.10/libgstfaad.la
-
-(gstreamer0.10-plugins-gsm)
-  /usr/lib/gstreamer-0.10/cyggstgsm.dll
-  /usr/lib/gstreamer-0.10/libgstgsm.la
-
-(gstreamer0.10-plugins-jp2k)
-  /usr/lib/gstreamer-0.10/cyggstjp2k.dll
-  /usr/lib/gstreamer-0.10/libgstjp2k.la
-
-(gstreamer0.10-plugins-ladspa)
-  /usr/lib/gstreamer-0.10/cyggstladspa.dll
-  /usr/lib/gstreamer-0.10/libgstladspa.la
-
-(gstreamer0.10-plugins-libmms)
-  /usr/lib/gstreamer-0.10/cyggstmms.dll
-  /usr/lib/gstreamer-0.10/libgstmms.la
-
-(gstreamer0.10-plugins-metadata)
-  /usr/lib/gstreamer-0.10/cyggstmetadata.dll
-  /usr/lib/gstreamer-0.10/libgstmetadata.la
-
-(gstreamer0.10-plugins-mimic)
-  /usr/lib/gstreamer-0.10/cyggstmimic.dll
-  /usr/lib/gstreamer-0.10/libgstmimic.la
-
-(gstreamer0.10-plugins-modplug)
-  /usr/lib/gstreamer-0.10/cyggstmodplug.dll
-  /usr/lib/gstreamer-0.10/libgstmodplug.la
-
-(gstreamer0.10-plugins-mpeg2enc)
-  /usr/lib/gstreamer-0.10/cyggstmpeg2enc.dll
-  /usr/lib/gstreamer-0.10/libgstmpeg2enc.la
-
-(gstreamer0.10-plugins-mplex)
-  /usr/lib/gstreamer-0.10/cyggstmplex.dll
-  /usr/lib/gstreamer-0.10/libgstmplex.la
-
-(gstreamer0.10-plugins-musepack)
-  /usr/lib/gstreamer-0.10/cyggstmusepack.dll
-  /usr/lib/gstreamer-0.10/libgstmusepack.la
-
-(gstreamer0.10-plugins-musicbrainz)
-  /usr/lib/gstreamer-0.10/cyggsttrm.dll
-  /usr/lib/gstreamer-0.10/libgsttrm.la
-
-(gstreamer0.10-plugins-nas)
-  /usr/lib/gstreamer-0.10/cyggstnassink.dll
-  /usr/lib/gstreamer-0.10/libgstnassink.la
-
-(gstreamer0.10-plugins-neon)
-  /usr/lib/gstreamer-0.10/cyggstneonhttpsrc.dll
-  /usr/lib/gstreamer-0.10/libgstneonhttpsrc.la
-
-(gstreamer0.10-plugins-ofa)
-  /usr/lib/gstreamer-0.10/cyggstofa.dll
-  /usr/lib/gstreamer-0.10/libgstofa.la
-
-(gstreamer0.10-plugins-resindvd)
-  /usr/lib/gstreamer-0.10/cygresindvd.dll
-  /usr/lib/gstreamer-0.10/libresindvd.la
-
-(gstreamer0.10-plugins-sdl)
-  /usr/lib/gstreamer-0.10/cyggstsdl.dll
-  /usr/lib/gstreamer-0.10/libgstsdl.la
-
-(gstreamer0.10-plugins-sndfile)
-  /usr/lib/gstreamer-0.10/cyggstsndfile.dll
-  /usr/lib/gstreamer-0.10/libgstsndfile.la
-
-(gstreamer0.10-plugins-soundtouch)
-  /usr/lib/gstreamer-0.10/cyggstsoundtouch.dll
-  /usr/lib/gstreamer-0.10/libgstsoundtouch.la
-
-(gstreamer0.10-plugins-timidity)
-  /usr/lib/gstreamer-0.10/cyggsttimidity.dll
-  /usr/lib/gstreamer-0.10/libgsttimidity.la
-
-(gstreamer0.10-plugins-wildmidi)
-  /usr/lib/gstreamer-0.10/cyggstwildmidi.dll
-  /usr/lib/gstreamer-0.10/libgstwildmidi.la
-
-(gstreamer0.10-plugins-xvid)
-  /usr/lib/gstreamer-0.10/cyggstxvid.dll
-  /usr/lib/gstreamer-0.10/libgstxvid.la
-
-(libgstphotography0.10_0)
-  /usr/bin/cyggstphotography-0.10-0.dll
-
-(libgstphotography0.10-devel)
-  /usr/include/gstreamer-0.10/gst/interfaces/photography-enumtypes.h
-  /usr/include/gstreamer-0.10/gst/interfaces/photography.h
-  /usr/lib/libgstphotography-0.10.dll.a
-  /usr/lib/libgstphotography-0.10.la
-
-------------------
-
 Port Notes:
+
+----- version 0.10.14-1 -----
+Version bump.
+Added plugins: gme, lv2, schro.
 
 ----- version 0.10.13-1 -----
 Initial release for Cygwin 1.7.
