@@ -1,11 +1,11 @@
-GST_PLUGINS_EXT="apexsink assrender bz2 celt dirac dts faac faad gme gsm jp2k
-                 ladspa libmms lv2 metadata mimic modplug mpeg2enc mplex
-                 musepack musicbrainz nas neon ofa resindvd schro sdl sndfile
-                 soundtouch timidity wildmidi xvid"
+# cog: requires orc-0.4.3
+GST_PLUGINS_EXT="apexsink assrender bz2 celt dirac dts faac faad gme gsm
+                 jp2k kate ladspa libmms lv2 metadata mimic modplug mpeg2enc
+                 mplex musepack musicbrainz nas neon ofa resindvd rsvg
+                 schro sdl sndfile soundtouch timidity wildmidi xvid zbar"
 inherit gst-plugins
 
-PATCH_URI="0.10.13-vpath.patch
-           0.10.14-gstsignalprocessor.patch"
+PATCH_URI="0.10.13-vpath.patch"
 
 PKG_NAMES="${PN}"
 PKG_HINTS="bad"
