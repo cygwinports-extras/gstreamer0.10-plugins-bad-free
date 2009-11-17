@@ -5,7 +5,8 @@ GST_PLUGINS_EXT="apexsink assrender bz2 celt dirac dts faac faad gme gsm
                  schro sdl sndfile soundtouch timidity wildmidi xvid zbar"
 inherit gst-plugins
 
-PATCH_URI="0.10.13-vpath.patch"
+PATCH_URI="0.10.13-vpath.patch
+           0.10.17-vpath.patch"
 
 PKG_NAMES="${PN}"
 PKG_HINTS="bad"
