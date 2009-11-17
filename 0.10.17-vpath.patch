@@ -1,0 +1,22 @@
+--- origsrc/gst-plugins-bad-0.10.17/ext/ladspa/Makefile.am	2009-10-12 05:23:35.000000000 -0500
++++ src/gst-plugins-bad-0.10.17/ext/ladspa/Makefile.am	2009-11-16 23:32:32.428443600 -0600
+@@ -2,7 +2,7 @@ plugin_LTLIBRARIES = libgstladspa.la
+ 
+ libgstladspa_la_SOURCES = gstladspa.c
+ libgstladspa_la_CFLAGS = \
+-	-I$(top_builddir)/gst-libs \
++	-I$(top_srcdir)/gst-libs \
+ 	$(GST_PLUGINS_BASE_CFLAGS) \
+ 	$(GST_CONTROLLER_CFLAGS) $(GST_CFLAGS) $(LRDF_CFLAGS)
+ libgstladspa_la_LIBADD = \
+--- origsrc/gst-plugins-bad-0.10.17/ext/lv2/Makefile.am	2009-10-12 05:23:35.000000000 -0500
++++ src/gst-plugins-bad-0.10.17/ext/lv2/Makefile.am	2009-11-16 23:34:09.008212000 -0600
+@@ -2,7 +2,7 @@ plugin_LTLIBRARIES = libgstlv2.la
+ 
+ libgstlv2_la_SOURCES = gstlv2.c
+ libgstlv2_la_CFLAGS = \
+-	-I$(top_builddir)/gst-libs \
++	-I$(top_srcdir)/gst-libs \
+ 	$(GST_PLUGINS_BASE_CFLAGS) \
+ 	$(GST_CONTROLLER_CFLAGS) $(GST_CFLAGS) $(SLV2_CFLAGS)
+ libgstlv2_la_LIBADD = \
