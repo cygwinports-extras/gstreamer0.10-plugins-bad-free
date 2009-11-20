@@ -3,14 +3,14 @@ gstreamer0.10-plugins-bad
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
-  cygwin-1.7.0-62
+  cygwin-1.7.0-64
   libgcc1-4.3.4-1
-  libglib2.0_0-2.20.5-1
+  libglib2.0_0-2.22.2-1
   libgstinterfaces0.10_0-0.10.25-1
   libgstreamer0.10_0-0.10.25-1
   libintl8-0.17-11
   liboil0.3_0-0.3.16-1
-  libX11_6-1.3.2-1
+  libX11_6-1.3.2-2
 (apexsink)
   openssl-0.9.8k-2
 (assrender)
@@ -27,6 +27,8 @@ Runtime requirements:
   libfaac0-1.28-1
 (faad)
   libfaad2-2.7-10
+(frei0r)
+  frei0r-plugins-1.1.22-1
 (gme)
   libgme0-0.5.5-1
 (gsm)
@@ -88,12 +90,11 @@ Runtime requirements:
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-10
-  automake1.9-1.9.6-10
+  automake1.11-1.11-10
   binutils-2.19.51-1
   cygport-0.9.10-1
   gawk-3.1.7-1
-  gcc4-core-4.3.2-2
-  gcc4-g++-4.3.2-2
+  gcc4-core-4.3.4-1
   gettext-devel-0.17-11
   gtk-doc-1.11-2
   libtool-2.2.7a-14
@@ -129,6 +130,7 @@ This will create:
   /usr/src/gstreamer0.10-plugins-dts-0.10.17-X.tar.bz2
   /usr/src/gstreamer0.10-plugins-faac-0.10.17-X.tar.bz2
   /usr/src/gstreamer0.10-plugins-faad-0.10.17-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-frei0r-0.10.17-X.tar.bz2
   /usr/src/gstreamer0.10-plugins-gme-0.10.17-X.tar.bz2
   /usr/src/gstreamer0.10-plugins-gsm-0.10.17-X.tar.bz2
   /usr/src/gstreamer0.10-plugins-jp2k-0.10.17-X.tar.bz2
@@ -165,6 +167,9 @@ This will create:
 -------------------------------------------
 
 Port Notes:
+
+----- version 0.10.17-2 -----
+Created separate package for the frei0r plugin.
 
 ----- version 0.10.17-1 -----
 Version bump.
