@@ -3,9 +3,9 @@ gstreamer0.10-plugins-bad
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
-  cygwin-1.7.0-64
-  libgcc1-4.3.4-1
-  libglib2.0_0-2.22.2-1
+  cygwin-1.7.1-1
+  libgcc1-4.3.4-3
+  libglib2.0_0-2.22.4-2
   libgstinterfaces0.10_0-0.10.25-1
   libgstreamer0.10_0-0.10.25-1
   libintl8-0.17-11
@@ -23,8 +23,6 @@ Runtime requirements:
   libdirac0-1.0.2-10
 (dts)
   libdca0-0.0.5-10
-(faac)
-  libfaac0-1.28-1
 (faad)
   libfaad2-2.7-10
 (frei0r)
@@ -58,7 +56,7 @@ Runtime requirements:
 (mpeg2enc,mplex)
   libmjpegtools1.9_0-1.9.0-1
 (musepack)
-  libmpcdec5-1.2.6-1
+  libmpcdec7-453-1
 (musicbrainz)
   libmusicbrainz4-2.1.5-10
 (nas)
@@ -89,15 +87,15 @@ Runtime requirements:
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
-  automake1.11-1.11-10
+  autoconf2.5-2.65-1
+  automake1.11-1.11.1-1
   binutils-2.19.51-1
-  cygport-0.9.10-1
+  cygport-0.9.80-1
   gawk-3.1.7-1
-  gcc4-core-4.3.4-1
+  gcc4-core-4.3.4-3
   gettext-devel-0.17-11
-  gtk-doc-1.11-2
-  libtool-2.2.7a-14
+  gtk-doc-1.13-1
+  libtool-2.2.7a-15
   make-3.81-2
   pkg-config-0.23b-10
   python-2.5.4-10
@@ -128,7 +126,6 @@ This will create:
   /usr/src/gstreamer0.10-plugins-celt-0.10.17-X.tar.bz2
   /usr/src/gstreamer0.10-plugins-dirac-0.10.17-X.tar.bz2
   /usr/src/gstreamer0.10-plugins-dts-0.10.17-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-faac-0.10.17-X.tar.bz2
   /usr/src/gstreamer0.10-plugins-faad-0.10.17-X.tar.bz2
   /usr/src/gstreamer0.10-plugins-frei0r-0.10.17-X.tar.bz2
   /usr/src/gstreamer0.10-plugins-gme-0.10.17-X.tar.bz2
@@ -167,6 +164,9 @@ This will create:
 -------------------------------------------
 
 Port Notes:
+
+----- version 0.10.17-3 -----
+Rebuilt for libmpcdec SV8.
 
 ----- version 0.10.17-2 -----
 Created separate package for the frei0r plugin.
