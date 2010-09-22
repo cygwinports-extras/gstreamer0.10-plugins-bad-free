@@ -4,8 +4,6 @@ GST_PLUGINS_EXT="apexsink assrender bz2 celt cog dirac dts faad gme gsm
                  schro sdl sndfile soundtouch timidity wildmidi xvid zbar"
 inherit gst-plugins
 
-PATCH_URI="0.10.13-vpath.patch"
-
 PKG_NAMES="${PN}"
 PKG_HINTS="bad"
 
@@ -46,6 +44,8 @@ do
 	declare libgst${lib}0_10_devel_CONTENTS="usr/include/gstreamer-0.10/gst/*/*${lib}* usr/lib/libgst${lib}-0.10.*"
 done
 libgstphotography0_10_devel_CONTENTS+=" usr/lib/pkgconfig/"
+
+DIFF_EXCLUDES+=" *.gschema.xml"
 
 # frei0r plugins use .so suffix
 CPPFLAGS+=' -DGST_EXTRA_MODULE_SUFFIX="\".so\""'
