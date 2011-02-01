@@ -1,5 +1,0 @@
-category: Video
-requires: libgstbasevideo0.10_0 libglib2.0-devel libgstreamer0.10-devel libgstinterfaces0.10-devel
-external-source: gstreamer0.10-plugins-bad
-sdesc: "GStreamer media framework base video library (development)"
-ldesc: "This is gst-plugins, a set of plug-ins for GStreamer."

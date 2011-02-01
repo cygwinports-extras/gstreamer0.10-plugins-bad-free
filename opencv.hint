@@ -1,0 +1,5 @@
+category: Video
+requires: libglib2.0_0 libgstinterfaces0.10_0 libgstreamer0.10_0 libcv2.1
+external-source: gstreamer0.10-plugins-bad
+sdesc: "OpenCV plugin for the GStreamer multimedia framework (0.10 branch)"
+ldesc: "OpenCV plugin for the GStreamer multimedia framework (0.10 branch)"
