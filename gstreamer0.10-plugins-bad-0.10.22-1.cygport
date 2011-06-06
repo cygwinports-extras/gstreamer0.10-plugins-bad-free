@@ -1,5 +1,5 @@
-GST_PLUGINS_EXT="apexsink assrender bz2 celt cog dirac dts faad gme gsettings gsm
-                 jp2k kate ladspa libmms lv2 mimic modplug mpeg2enc
+GST_PLUGINS_EXT="apexsink assrender bz2 celt cog curl dirac dts faad gme
+                 gsettings gsm jp2k kate ladspa libmms lv2 mimic modplug mpeg2enc
                  mplex musepack musicbrainz nas neon ofa opencv resindvd rsvg rtmp
                  schro sdl sndfile soundtouch timidity vp8 wildmidi xvid zbar"
 inherit gst-plugins
