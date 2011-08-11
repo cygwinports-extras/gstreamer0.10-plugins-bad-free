@@ -4,6 +4,8 @@ GST_PLUGINS_EXT="apexsink assrender bz2 celt cog curl dirac dts faad gme
                  schro sdl sndfile soundtouch timidity vp8 wildmidi xvid zbar"
 inherit gst-plugins
 
+PATCH_URI="0.10.22-opencv23.patch"
+
 PKG_NAMES="${PN} ${PN}-devel"
 PKG_HINTS="bad devel"
 
