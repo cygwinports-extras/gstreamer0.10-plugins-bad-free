@@ -4,14 +4,15 @@ GST_PLUGINS_EXT="apexsink assrender bz2 celt cog curl dirac dts faad gme
                  schro sdl sndfile soundtouch timidity vp8 wildmidi xvid zbar"
 inherit gst-plugins
 
-PATCH_URI="0.10.22-opencv23.patch"
+PATCH_URI="0.10.22-opencv23.patch
+           0.10.22-mjpegtools20.patch"
 
 PKG_NAMES="${PN} ${PN}-devel"
 PKG_HINTS="bad devel"
 
 # frei0r: is in gst/ (as <frei0r.h> is included in sources so) it has no
 #         external build deps, but it should really in ext/ due to runtime deps
-# rbfsrc: included librfb depends on libX11
+# rfbsrc: included librfb depends on libX11
 for ext in ${GST_PLUGINS_EXT} frei0r rfbsrc
 do
 	case ${ext} in
