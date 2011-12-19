@@ -1,5 +1,5 @@
 category: Video
 requires: libgcc1 libglib2.0_0 libgstinterfaces0.10_0 libgstreamer0.10_0 libvpx0
-external-source: gstreamer0.10-plugins-bad
+external-source: gstreamer0.10-plugins-bad-free
 sdesc: "VP8 plugin for the GStreamer multimedia framework (0.10 branch)"
 ldesc: "VP8 plugin for the GStreamer multimedia framework (0.10 branch)"

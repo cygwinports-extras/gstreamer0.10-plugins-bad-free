@@ -1,5 +1,0 @@
-category: Audio
-requires: libgcc1 libglib2.0_0 libgstreamer0.10_0 libmjpegtools2.0_0 libstdc++6
-external-source: gstreamer0.10-plugins-bad
-sdesc: "MPEG2 encoder plugin for the GStreamer multimedia framework (0.10 branch)"
-ldesc: "MPEG2 encoder plugin for the GStreamer multimedia framework (0.10 branch)"

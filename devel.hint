@@ -1,6 +1,6 @@
 category: Audio Gnome Video
 requires: gstreamer0.10-plugins-bad-devel libglib2.0-devel libgstinterfaces0.10-devel libgstreamer0.10-devel
-external-source: gstreamer0.10-plugins-bad
+external-source: gstreamer0.10-plugins-bad-free
 sdesc: "Bad plugins for the GStreamer multimedia framework (0.10 branch, development)"
 ldesc: "Bad plugins for the GStreamer multimedia framework (0.10 branch)"
 

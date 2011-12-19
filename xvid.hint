@@ -1,6 +1,0 @@
-category: Audio
-requires: libgcc1 libglib2.0_0 libgstreamer0.10_0 libxvidcore4
-external-source: gstreamer0.10-plugins-bad
-sdesc: "Xvid plugin for the GStreamer multimedia framework (0.10 branch)"
-ldesc: "Xvid plugin for the GStreamer multimedia framework (0.10 branch)"
-

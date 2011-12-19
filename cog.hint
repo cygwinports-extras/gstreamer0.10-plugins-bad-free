@@ -1,6 +1,6 @@
 category: Audio
 requires: libgcc1 libglib2.0_0 libgstinterfaces0.10_0 libgstreamer0.10_0 liborc0.4_0 libpng14
-external-source: gstreamer0.10-plugins-bad
+external-source: gstreamer0.10-plugins-bad-free
 sdesc: "Cog plugin for the GStreamer multimedia framework (0.10 branch)"
 ldesc: "Cog plugin for the GStreamer multimedia framework (0.10 branch)"
 

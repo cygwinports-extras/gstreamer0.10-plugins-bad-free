@@ -1,0 +1,47 @@
+md5sum=f2e52c0eced1efbc591c1f7c98658628
+
+GST_PLUGINS_EXT="apexsink assrender bz2 celt cog curl dirac
+                 gsettings gsm jp2k kate ladspa lv2 modplug
+                 musepack musicbrainz nas neon ofa opencv resindvd rsvg
+                 schro sdl sndfile soundtouch timidity vp8 wildmidi zbar"
+inherit gst-plugins
+
+SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/${PN}/${ORIG_PN}-${PV}.tar.bz2/${md5sum}/${ORIG_PN}-${PV}.tar.bz2"
+SRC_DIR="gst-plugins-bad-${PV}"
+PATCH_URI="0.10.22-opencv23.patch"
+
+PKG_NAMES="${PN} ${PN%-free}-devel"
+PKG_HINTS="bad devel"
+
+# frei0r: is in gst/ (as <frei0r.h> is included in sources so) it has no
+#         external build deps, but it should really in ext/ due to runtime deps
+# rfbsrc: included librfb depends on libX11
+for ext in ${GST_PLUGINS_EXT} frei0r rfbsrc
+do
+	PKG_NAMES+=" ${PN%-bad-free}-${ext}"
+	PKG_HINTS+=" ${ext}"
+	case ${ext} in
+		musicbrainz)
+			declare gstreamer0_10_plugins_${ext}_CONTENTS="${GST_PLUGINDIR#/}/*gsttrm.*"
+			gstreamer0_10_plugins_bad_free_CONTENTS+=" --exclude=*gsttrm.*"
+			;;
+		resindvd)
+			declare gstreamer0_10_plugins_${ext}_CONTENTS="${GST_PLUGINDIR#/}/*resindvd*"
+			gstreamer0_10_plugins_bad_free_CONTENTS+=" --exclude=*resindvd*"
+			;;
+		*)
+			declare gstreamer0_10_plugins_${ext}_CONTENTS="${GST_PLUGINDIR#/}/*gst${ext}*"
+			gstreamer0_10_plugins_bad_free_CONTENTS+=" --exclude=*gst${ext}*"
+			;;
+	esac
+done
+unset ext
+
+gstreamer0_10_plugins_gsettings_CONTENTS+=" usr/share/glib-2.0/ etc/postinstall/"
+gstreamer0_10_plugins_bad_free_CONTENTS+=" --exclude=glib-2.0 usr/bin/ usr/lib/gstreamer-0.10/ usr/share/"
+gstreamer0_10_plugins_bad_devel_CONTENTS=" usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+
+DIFF_EXCLUDES+=" *.gschema.xml"
+
+# frei0r plugins use .so suffix
+CPPFLAGS+=' -DGST_EXTRA_MODULE_SUFFIX="\".so\""'
