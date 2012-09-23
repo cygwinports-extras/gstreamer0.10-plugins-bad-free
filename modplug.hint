@@ -1,5 +1,0 @@
-category: Audio
-requires: libgcc1 libglib2.0_0 libgstreamer0.10_0 libmodplug1 libstdc++6
-external-source: gstreamer0.10-plugins-bad-free
-sdesc: "MOD plugin for the GStreamer multimedia framework (0.10 branch)"
-ldesc: "MOD plugin for the GStreamer multimedia framework (0.10 branch)"

@@ -1,5 +1,0 @@
-category: Video
-requires: libgcc1 libglib2.0_0 libgstreamer0.10_0 libgstinterfaces0.10_0 libjasper1
-external-source: gstreamer0.10-plugins-bad-free
-sdesc: "JPEG-2000 plugin for the GStreamer multimedia framework (0.10 branch)"
-ldesc: "JPEG-2000 plugin for the GStreamer multimedia framework (0.10 branch)"

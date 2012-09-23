@@ -1,5 +1,0 @@
-category: Video
-requires: libgcc1 libglib2.0_0 libgstinterfaces0.10_0 libgstreamer0.10_0 libkate1 libtiger5
-external-source: gstreamer0.10-plugins-bad-free
-sdesc: "Kate plugin for the GStreamer multimedia framework (0.10 branch)"
-ldesc: "Kate plugin for the GStreamer multimedia framework (0.10 branch)"
