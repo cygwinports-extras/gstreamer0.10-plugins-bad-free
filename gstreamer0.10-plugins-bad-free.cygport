@@ -1,6 +1,6 @@
 NAME="gstreamer0.10-plugins-bad-free"
 VERSION=0.10.23
-RELEASE=3
+RELEASE=4
 CATEGORY="Audio Video"
 SUMMARY="GStreamer 0.10 Bad plugins"
 DESCRIPTION="GStreamer Bad Plug-ins is a set of plug-ins that aren't up to par
@@ -60,5 +60,6 @@ DIFF_EXCLUDES+=" *.gschema.xml"
 
 # frei0r plugins use .so suffix
 CPPFLAGS+=' -DGST_EXTRA_MODULE_SUFFIX="\".so\""'
+CYGCONF_ARGS="--disable-gtk-doc"
 
 KEEP_LA_FILES="none"
