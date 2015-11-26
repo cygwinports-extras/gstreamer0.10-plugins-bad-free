@@ -1,0 +1,22 @@
+--- origsrc/gst-plugins-bad-0.10.23/sys/d3dvideosink/d3dvideosink.c	2012-02-09 12:40:34.000000000 -0600
++++ src/gst-plugins-bad-0.10.23/sys/d3dvideosink/d3dvideosink.c	2015-11-25 00:57:45.698632700 -0600
+@@ -2615,7 +2615,7 @@ plugin_init (GstPlugin * plugin)
+ {
+   /* PRIMARY: this is the best videosink to use on windows */
+   if (!gst_element_register (plugin, "d3dvideosink",
+-          GST_RANK_PRIMARY, GST_TYPE_D3DVIDEOSINK))
++          GST_RANK_MARGINAL + 1, GST_TYPE_D3DVIDEOSINK))
+     return FALSE;
+ 
+   return TRUE;
+--- origsrc/gst-plugins-bad-0.10.23/sys/directdraw/gstdirectdrawplugin.c	2011-12-30 12:24:33.000000000 -0600
++++ src/gst-plugins-bad-0.10.23/sys/directdraw/gstdirectdrawplugin.c	2015-11-25 00:17:02.318362800 -0600
+@@ -33,7 +33,7 @@
+ static gboolean
+ plugin_init (GstPlugin * plugin)
+ {
+-  if (!gst_element_register (plugin, "directdrawsink", GST_RANK_SECONDARY,
++  if (!gst_element_register (plugin, "directdrawsink", GST_RANK_MARGINAL,
+           GST_TYPE_DIRECTDRAW_SINK))
+     return FALSE;
+ 

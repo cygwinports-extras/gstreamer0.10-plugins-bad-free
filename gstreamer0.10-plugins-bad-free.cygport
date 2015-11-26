@@ -1,61 +1,71 @@
+GST_PLUGINS_ENABLE="apexsink assrender bz2 cog curl flite gme
+                 gsettings gsm jp2k kate ladspa lv2 modplug musepack
+                 nas ofa openal opus resindvd rsvg
+                 schro sdl sndfile soundtouch timidity vp8 wildmidi zbar
+		 acm direct3d directdraw directsound"
+GST_PLUGINS_DISABLE="cdaudio celt dc1394 dirac directfb
+	divx dts dvb faac faad fbdev libmms mimic
+	mpeg2enc mplex musicbrainz mythtv neon osx_video opencv pvr quicktime
+	rtmp spandsp spc swfdec vcd vdpau voaacenc voamrwbenc wininet xvid"
+inherit gst-plugins
+
 NAME="gstreamer0.10-plugins-bad-free"
 VERSION=0.10.23
-RELEASE=6
+RELEASE=7
 CATEGORY="Audio Video"
 SUMMARY="GStreamer 0.10 Bad plugins"
 DESCRIPTION="GStreamer Bad Plug-ins is a set of plug-ins that aren't up to par
 compared to the rest. They might be close to being good quality, but they're
 missing something - be it a good code review, some documentation, a set of
 tests, a real live maintainer, or some actual wide use."
-GST_PLUGINS_ENABLE="apexsink assrender bz2 cog curl dirac
-                 gsettings gsm jp2k kate ladspa lv2 modplug musepack
-                 nas ofa openal opencv opus resindvd rsvg
-                 schro sdl sndfile soundtouch timidity vp8 wildmidi zbar"
-GST_PLUGINS_DISABLE="acm cdaudio celt dc1394 direct3d directdraw directfb
-	directsound divx dts dvb faac faad fbdev flite gme libmms mimic
-	mpeg2enc mplex musicbrainz mythtv neon osx_video pvr quicktime rtmp spandsp
-	spc swfdec vcd vdpau voaacenc voamrwbenc wininet xvid"
-inherit gst-plugins
-
 md5sum=6a693a60ab61e53f4a223fe2e65e3b62
 SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/${NAME/0.10/}/gst-plugins-bad-free-${VERSION}.tar.xz/${md5sum}/gst-plugins-bad-free-${VERSION}.tar.xz"
 SRC_DIR="gst-plugins-bad-${VERSION}"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0001-gstcamerabin-Fix-spelling-error-in-debug-logging.patch
+	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0002-camerabin-Add-a-camerabin_create_view_finder_caps-he.patch
+	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0003-camerabin-Add-gst_camerabin_get_video_source_propert.patch
+	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0004-camerabin-Set-src_filter-and-zoom_src_filter-caps-wh.patch
+	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0005-geometrictransform-crash-fix1.patch
+	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0006-geometrictransform-crash-fix2.patch
+	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0001-Delete-unbuilt-plugins-from-the-docs.patch
+	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0001-modplug-Specify-directory-when-including-stdafx.h.patch
+	0.10.23-gdi-rank.patch
+	0.10.23-d3dvideosink-cygwin.patch
+"
 
-PATCH_URI="0.10.23-opencv-compile.patch"
+PKG_NAMES="${NAME} ${NAME}-extras ${NAME%-free}-doc"
 
-PKG_NAMES="${NAME} ${NAME%-free}-devel"
-
-# frei0r: is in gst/ (as <frei0r.h> is included in sources so) it has no
-#         external build deps, but it should really in ext/ due to runtime deps
-# rfbsrc: included librfb depends on libX11
-for ext in ${GST_PLUGINS_ENABLE} frei0r rfbsrc
+for ext in apexsink bz2 cog gsettings gsm jp2k ladspa musepack opus resindvd \
+	   rsvg sndfile soundtouch vp8 celt frei0r rfbsrc ofa opencv
 do
-	PKG_NAMES+=" ${NAME%-bad-free}-${ext}"
-	declare gstreamer0_10_plugins_${ext}_SUMMARY="GStreamer 0.10 ${ext} plugin"
-	case ${ext} in
-		resindvd)
-			declare gstreamer0_10_plugins_${ext}_CONTENTS="${GST_PLUGINDIR#/}/cygresindvd.dll"
-			gstreamer0_10_plugins_bad_free_CONTENTS+=" --exclude=cygresindvd.dll"
-			;;
-		*)
-			declare gstreamer0_10_plugins_${ext}_CONTENTS="${GST_PLUGINDIR#/}/cyggst${ext}*.dll"
-			gstreamer0_10_plugins_bad_free_CONTENTS+=" --exclude=cyggst${ext}*.dll"
-			;;
-	esac
+	gstreamer0_10_plugins_bad_free_OBSOLETES+=" ${NAME%-bad-free}-${ext}"
+done
+for ext in assrender curl flite gme kate lv2 modplug nas openal schro \
+	   sdl timidity wildmidi zbar
+do
+	gstreamer0_10_plugins_bad_free_CONTENTS+=" --exclude=cyggst${ext}*"
+	gstreamer0_10_plugins_bad_free_extras_OBSOLETES+=" ${NAME%-bad-free}-${ext}"
+	gstreamer0_10_plugins_bad_free_extras_CONTENTS+=" usr/lib/gstreamer-0.10/cyggst${ext}*"
 done
 unset ext
 
-gstreamer0_10_plugins_frei0r_REQUIRES="frei0r-plugins"
-gstreamer0_10_plugins_gsettings_REQUIRES="dconf-service"
-gstreamer0_10_plugins_gsettings_CONTENTS+=" usr/share/glib-2.0/ etc/postinstall/"
-gstreamer0_10_plugins_bad_free_CONTENTS+=" --exclude=glib-2.0 usr/bin/ usr/lib/gstreamer-0.10/ usr/share/"
-gstreamer0_10_plugins_bad_devel_SUMMARY="${SUMMARY} (library development)"
-gstreamer0_10_plugins_bad_devel_CONTENTS=" usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+gstreamer0_10_plugins_bad_free_CONTENTS+="
+	--exclude=gtk-doc etc/ usr/lib/gstreamer-0.10/ usr/share/
+"
+gstreamer0_10_plugins_bad_doc_CATEGORY="Doc"
+gstreamer0_10_plugins_bad_doc_CONTENTS="usr/share/gtk-doc/"
+
+PKG_NAMES+=" libgstbad0.10_23 libgstbad0.10-devel"
+libgstbad0_10_23_SUMMARY=${SUMMARY/plugins/libraries}
+libgstbad0_10_23_CONTENTS="usr/bin/cyggst*-0.10-23.dll"
+libgstbad0_10_devel_SUMMARY=${libgstbad0_10_23_SUMMARY}
+libgstbad0_10_devel_OBSOLETES="gstreamer0.10-plugins-bad-devel"
+libgstbad0_10_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
 
 DIFF_EXCLUDES+=" *.gschema.xml"
 
 # frei0r plugins use .so suffix
 CPPFLAGS+=' -DGST_EXTRA_MODULE_SUFFIX="\".so\""'
-CYGCONF_ARGS="--disable-gtk-doc"
 
 KEEP_LA_FILES="none"
