@@ -1,11 +1,11 @@
 GST_PLUGINS_ENABLE="apexsink assrender bz2 cog curl flite gme
                  gsettings gsm jp2k kate ladspa lv2 modplug musepack
-                 nas ofa openal opus resindvd rsvg
+                 nas openal opus resindvd rsvg
                  schro sdl sndfile soundtouch timidity vp8 wildmidi zbar
 		 acm direct3d directdraw directsound"
 GST_PLUGINS_DISABLE="cdaudio celt dc1394 dirac directfb
 	divx dts dvb faac faad fbdev libmms mimic
-	mpeg2enc mplex musicbrainz mythtv neon osx_video opencv pvr quicktime
+	mpeg2enc mplex musicbrainz mythtv neon ofa osx_video opencv pvr quicktime
 	rtmp spandsp spc swfdec vcd vdpau voaacenc voamrwbenc wininet xvid"
 inherit gst-plugins
 
