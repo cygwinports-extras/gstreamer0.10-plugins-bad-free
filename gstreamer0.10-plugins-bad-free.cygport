@@ -11,7 +11,7 @@ inherit gst-plugins
 
 NAME="gstreamer0.10-plugins-bad-free"
 VERSION=0.10.23
-RELEASE=8
+RELEASE=9
 CATEGORY="Audio Video"
 SUMMARY="GStreamer 0.10 Bad plugins"
 DESCRIPTION="GStreamer Bad Plug-ins is a set of plug-ins that aren't up to par
@@ -22,6 +22,7 @@ md5sum=6a693a60ab61e53f4a223fe2e65e3b62
 SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/${NAME/0.10/}/gst-plugins-bad-free-${VERSION}.tar.xz/${md5sum}/gst-plugins-bad-free-${VERSION}.tar.xz"
 SRC_DIR="gst-plugins-bad-${VERSION}"
 PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/vp8enc-bitrate-fix.patch
 	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0001-gstcamerabin-Fix-spelling-error-in-debug-logging.patch
 	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0002-camerabin-Add-a-camerabin_create_view_finder_caps-he.patch
 	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0003-camerabin-Add-gst_camerabin_get_video_source_propert.patch
@@ -30,6 +31,7 @@ PATCH_URI="
 	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0006-geometrictransform-crash-fix2.patch
 	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0001-Delete-unbuilt-plugins-from-the-docs.patch
 	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/0001-modplug-Specify-directory-when-including-stdafx.h.patch
+	http://pkgs.fedoraproject.org/cgit/gstreamer-plugins-bad-free.git/plain/gst-plugins-bad-0.10.23-drop-vpx-compat-defines.patch
 	0.10.23-gdi-rank.patch
 	0.10.23-d3dvideosink-cygwin.patch
 	0.10.23-acm-configure.patch
@@ -52,7 +54,7 @@ done
 unset ext
 
 gstreamer0_10_plugins_bad_free_CONTENTS+="
-	--exclude=gtk-doc etc/ usr/lib/gstreamer-0.10/ usr/share/
+	--exclude=gtk-doc usr/lib/gstreamer-0.10/ usr/share/
 "
 gstreamer0_10_plugins_bad_doc_CATEGORY="Doc"
 gstreamer0_10_plugins_bad_doc_CONTENTS="usr/share/gtk-doc/"
